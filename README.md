@@ -8,5 +8,5 @@
 
 Instructions for installing the necessary software:
 
-* [Setup](https://infotraining.bitbucket.io/python-basic/setup.html)
+* [Setup](https://infotraining.bitbucket.io/python-basic-en/setup.html)
 
