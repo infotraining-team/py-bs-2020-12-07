@@ -6,14 +6,14 @@ name_list = ['Dionizy', 'Natalia', 'anna', 'Artur', 'Stefan', 'Kinga', 'Aleksand
 
 foreign_name = ['Jean', 'Paul', 'Mao', 'Aurielie']
 
-# 1 - wyswietl z name_list imiona kobiet
+# 1 - print from name_list names ending in 'a'
 
-# 2 - usun z name_list Artura i Stefana
+# 2 - remove from name_list Artura and Stefana
 
-# 3 - utworz liste imion zaczynajacych sie na M
+# 3 - create list with names starting with M
 
-# 4 - posortuj alfabetycznie polaczona liste imion
+# 4 - sort the combined list of names
 
-# 5 - posortuj poloczona liste wg dlugosci imion
+# 5 - sort according to name length
 
-# 6 - odwroc kolejnosc posortowanej listy
+# 6 - reverse list from excercise 5

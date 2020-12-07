@@ -4,18 +4,18 @@
 ## is_prime(n) -> True | False
 
 def print_primes(limit):
-    pass
+    for n in range(2, limit+1):
+        if is_prime(n):
+            print(n)
 
 def is_prime(num):
+    for div in range(2, num):
+        if num % div == 0:
+            return False
     return True
 
 print("Testing")
-if is_prime(7) == True:
-    print("OK")
-else:
-    print("Error")
-
-if is_prime(6) == False:
-    print("OK")
-else:
-    print("Error")
+assert is_prime(7) == True
+assert is_prime(6) == False
+    
+print_primes(100)
