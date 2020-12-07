@@ -31,6 +31,10 @@ some_list = ["Ala", "Aleksander", "Leszek"]
 some_list.sort(key=len, reverse=True)
 print(some_list)
 
+name = "Leszek"
+print(name.lower())
+print(name.upper())
+
 
 
 
