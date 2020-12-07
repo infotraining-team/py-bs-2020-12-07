@@ -35,6 +35,9 @@ name = "Leszek"
 print(name.lower())
 print(name.upper())
 
+len(name)  #
+#name.len() # <- looks more oop, but it is not working
+
 
 
 
