@@ -14,7 +14,7 @@ def test_primes_return_empty_list():
     assert pt.primes(0) == []
 
 def test_primes_return_short_list():        
-    assert pt.primes(3) == [2, 3, 5]
+    assert pt.primes(6) == [2, 3, 5]
 
 def test_primes_check_last_item():        
     assert pt.primes(97)[-1] == 97
