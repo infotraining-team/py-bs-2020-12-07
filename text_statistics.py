@@ -13,9 +13,6 @@ words_freq = {}   # keys - strings, values - ints
 # assign to each word -> number of times it appeared in text
 
 for line in open("proust.txt", encoding="UTF-8"):
-    i += 1
-    if i > 100:
-        break    
     for word in line.split():
         # clean up
         word = word.strip('\n?!,."')
@@ -26,9 +23,25 @@ for line in open("proust.txt", encoding="UTF-8"):
             words_freq[word] = 1
 
 #print(words_freq)
-print(words_freq["the"])
+print(len(words_freq))
 # Step 2:
 # another dictionary -> keys - freq(int), values - list of words []
+freq = {}
+for word, f in words_freq.items():
+    if f not in freq:
+        freq[f] = []    
+    freq[f].append(word)
 
+#print(freq)
 # Step 3:
 # sort it
+# keys = list(freq.keys())
+# keys.sort(reverse=True)
+
+# items = list(freq.items()) <- (freq, [words])
+
+keys = sorted(freq.keys(), reverse=True)
+for i, key in enumerate(keys):
+    if i > 50:
+        break
+    print(i, "->", key, freq[key])
