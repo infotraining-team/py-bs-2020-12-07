@@ -8,14 +8,17 @@ def print_primes(limit):
         if is_prime(n):
             print(n)
 
+def primes(limit):
+    return []
+
 def is_prime(num):
     for div in range(2, num):
         if num % div == 0:
             return False
     return True
 
-print("Testing")
-assert is_prime(7) == True
-assert is_prime(6) == False
-    
-print_primes(100)
+print("Module is loading...")
+
+if __name__ == "__main__":    
+    print_primes(100)
+
