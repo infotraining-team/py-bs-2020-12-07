@@ -9,7 +9,11 @@ def print_primes(limit):
             print(n)
 
 def primes(limit):
-    return []
+    result = []
+    for n in range(2, limit+1):
+        if is_prime(n):
+            result.append(n)
+    return result
 
 def is_prime(num):
     for div in range(2, num):
