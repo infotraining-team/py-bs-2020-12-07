@@ -41,3 +41,21 @@ def summae(first, *args):
 print("------")
 print(summae(2))
 print(summae(1,2,3,4,5))
+
+def full_function(a, b, *args, **kwargs):
+    print(a, b, args, kwargs)
+
+print("------")
+full_function(3, 4)
+full_function(3, 4, 5, 6, 123)
+full_function(3, 4, name="Leszek", age=43)
+
+t = (1,2,3,4)
+
+full_function(t[0], t[1], t[2], t[3])
+full_function(*t)
+
+d = {'a' : 3, 'b' : 4, 'name' : "Ola"}
+full_function(**d)
+
+

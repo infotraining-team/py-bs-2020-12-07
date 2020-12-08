@@ -17,9 +17,13 @@ for line in open("proust.txt", encoding="UTF-8"):
         # clean up
         word = word.strip('\n?!,."')
         word = word.lower()
-        if word in words_freq:        
+        # if word in words_freq:        
+        #     words_freq[word] += 1
+        # else:
+        #     words_freq[word] = 1
+        try:
             words_freq[word] += 1
-        else:
+        except KeyError:
             words_freq[word] = 1
 
 #print(words_freq)
@@ -40,8 +44,12 @@ for word, f in words_freq.items():
 
 # items = list(freq.items()) <- (freq, [words])
 
-keys = sorted(freq.keys(), reverse=True)
-for i, key in enumerate(keys):
-    if i > 50:
-        break
-    print(i, "->", key, freq[key])
+# keys = sorted(freq.keys(), reverse=True)
+# for i, key in enumerate(keys[:50]):    
+#     print(i, "->", key, freq[key])
+
+## using lambdas 
+
+result = list(words_freq.items())
+result.sort(reverse=True, key=lambda item : item[1])
+print(result[:50])
