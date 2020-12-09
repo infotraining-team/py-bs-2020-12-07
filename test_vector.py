@@ -6,6 +6,13 @@ from vector import Vector
 ## v.x - property
 ## v.y - property
 ## v.length - read only length property
+## ***  bonus:
+## v.pos = (1, 2)
+## print(v.pos) -> (1, 2) (tuple)
+## ***  bonus 2:
+## 2D and 3D
+## v.pos = (1, 2, 3)
+## __init__(self, *args) - any number of arguments
 
 def test_creating_vector_with_coords():
     assert Vector(1, 1) != None
