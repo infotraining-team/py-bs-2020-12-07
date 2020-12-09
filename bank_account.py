@@ -1,23 +1,25 @@
 class BankAccount:
     def __init__(self, owner, balance):
-        self.balance = balance
-        self.owner = owner
+        self.__balance = balance
+        self.__owner = owner
 
     def info(self):
-        print("owner:", self.owner, " - balance:", self.balance)
+        print("owner:", self.__owner, " - balance:", self.__balance)
 
     def withdraw(self, amount):
-        print("withdraw called for", self.owner)
-        self.balance -= amount
+        if (self.__balance < amount):
+            amount = self.__balance
+            print("insufficent funds")
+        self.__balance -= amount
         return amount
+
+    def deposit(self, amount):
+        self.__balance += amount
 
 #print(BankAccount.__name__)
 
 person1acc = BankAccount(owner="Leszek", balance=100)
 person2acc = BankAccount("Ola", 200)
-
-person1acc.owner = "Leszek"
-person1acc.balance = 100
 
 bank_log = []
 bank_log.append(person1acc)
@@ -26,8 +28,19 @@ bank_log.append(BankAccount("Sonia", 300))
 
 for account in bank_log:
     account.info()
-    account.withdraw(100)
+    amount = account.withdraw(200)
+    print("asked for:", 200, "withdrawed:", amount)
+ 
+#print(person1acc.__balance)
+#person1acc.balance = -100
 
 print("-"*20)
 for account in bank_log:
     account.info()
+
+## print(person1acc._BankAccount__balance) <- you shouldn't do it
+## This is my interface
+person1acc.deposit(200)
+person1acc.withdraw(100)
+person1acc.info()
+
