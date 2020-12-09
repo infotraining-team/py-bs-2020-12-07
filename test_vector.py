@@ -1,3 +1,4 @@
+import pytest
 from vector import Vector
 
 def test_creating_vector_with_coords():
@@ -9,5 +10,8 @@ def test_check_vector_coords():
     assert vec.y == 2
 
 def test_check_vector_length():
-    vec = Vector(1, 0)
-    assert vec.length() == 1.0
+    vec = Vector(1, 1)
+    assert vec.length() == pytest.approx(1.4142, 0.001)
+
+    # import math
+    # math.sqrt(x*x + y*y)
