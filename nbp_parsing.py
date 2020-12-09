@@ -7,3 +7,6 @@ root = et.parse(request.urlopen(url))
 print(et.tostring(root, pretty_print=True).decode())
 
 ## print name of currency and current exchange rate
+for elem in root.iter("mid-rate"):
+    print("{:35} {:20}".format(elem.attrib["currency"], elem.text))
+    
