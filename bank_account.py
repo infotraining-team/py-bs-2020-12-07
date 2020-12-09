@@ -1,4 +1,6 @@
 class BankAccount:
+    __interest_rate = 0.01
+
     def __init__(self, owner, balance):
         self.__balance = balance
         self.__owner = owner
@@ -15,6 +17,21 @@ class BankAccount:
 
     def deposit(self, amount):
         self.__balance += amount
+
+    @staticmethod
+    def get_bank_info():
+        print("HtB bank")
+
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+    @classmethod
+    def get_interest_rate(cls):
+        print(cls.__interest_rate)
+
+    ## @staticmethod equals to:
+    ## get_bank_info = staticmethod(get_bank_info)
 
 #print(BankAccount.__name__)
 
@@ -44,3 +61,9 @@ person1acc.deposit(200)
 person1acc.withdraw(100)
 person1acc.info()
 
+person1acc.get_bank_info()
+
+BankAccount.get_bank_info()
+BankAccount.get_interest_rate()
+
+BankAccount.add(2, 4)
